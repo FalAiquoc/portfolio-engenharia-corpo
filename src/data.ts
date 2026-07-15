@@ -19,13 +19,13 @@ export const storeData: StoreData = {
     sunday: 'Domingo: 09:00 às 13:00',
   },
   colors: {
-    primaryHex: '#1e293b', // Slate Escuro Industrial
-    accentHex: '#f59e0b',  // Laranja Estimulante
+    primaryHex: '#12141a', // Preto industrial
+    accentHex: '#f59e0b',  // Laranja neon
   },
   typography: {
     displayFontFamily: 'Oswald',
     bodyFontFamily: 'Roboto',
-    importUrl: 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap',
+    importUrl: 'https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;750&family=Roboto:wght@300;450;700&display=swap',
   },
   features: [
     {
@@ -46,30 +46,42 @@ export const storeData: StoreData = {
   ],
   products: [
     {
-      id: 'prod-1',
-      name: 'Plano Mensal Livre',
-      description: 'Acesso ilimitado à área de musculação, cárdio e a todas as aulas coletivas da grade, sem taxa de cancelamento.',
+      id: 'plan-1',
+      name: 'Plano Smart Musculação',
+      description: 'Acesso total à área de musculação e aeróbicos em horários livres. Sem taxa de matrícula.',
       price: 'R$ 99,90/mês',
       iconName: 'Dumbbell',
       imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600',
+      category: 'mensal',
+      tag: 'Mais Popular'
     },
     {
-      id: 'prod-2',
-      name: 'Plano Anual Corporativo',
-      description: 'Acesso total garantido por 12 meses com preço promocional reduzido no cartão ou boleto recorrente.',
-      price: 'R$ 79,90/mês equivalente',
-      iconName: 'Timer',
+      id: 'plan-2',
+      name: 'Plano Gold (Aulas Inclusas)',
+      description: 'Acesso ilimitado à área de musculação + todas as aulas coletivas (Cross, Spinning, Zumba, Ritmos).',
+      price: 'R$ 139,90/mês',
+      iconName: 'Flame',
       imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=600',
+      category: 'vip',
+      tag: 'Melhor Valor'
     },
     {
-      id: 'prod-3',
-      name: 'Personal Trainer Parceiro',
-      description: 'Consultoria de treino e acompanhamento individual no salão com profissionais qualificados credenciados.',
-      price: 'Consulte taxas dos profissionais',
-      iconName: 'HeartPulse',
+      id: 'plan-3',
+      name: 'Plano Black Anual Recorrente',
+      description: 'Fidelidade de 12 meses com preço de musculação reduzido no cartão recorrente sem travar o limite.',
+      price: 'R$ 79,90/mês',
+      iconName: 'Award',
       imageUrl: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600',
-    },
+      category: 'anual',
+      tag: 'Economia Anual'
+    }
   ],
-  instagramUrl: 'https://instagram.com',
-  facebookUrl: 'https://facebook.com',
+  instagramUrl: 'https://www.instagram.com',
+  facebookUrl: 'https://www.facebook.com',
+  brands: [
+    { name: 'Matrix Fitness', desc: 'Maquinário de alta gama' },
+    { name: 'Life Fitness', desc: 'Ergonomia biomecânica' },
+    { name: 'Hammer Strength', desc: 'Musculação pesada' },
+    { name: 'Movement', desc: 'Cárdio de alta performance' }
+  ]
 };
