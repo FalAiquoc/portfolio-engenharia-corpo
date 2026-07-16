@@ -2,24 +2,26 @@ import { useEffect, useState } from 'react';
 import { storeData } from './data';
 import { Icon } from './components/Icon';
 
-// Componente de Logotipo Vetorial Industrial / Brutalista (Engrenagem com alter e linhas fortes de engenharia física)
+// Componente de Logotipo (Logo oficial por imagem ou Engrenagem brutalista estilizada SVG como fallback)
 function Logo({ className = "h-10", dark = false }: { className?: string; dark?: boolean }) {
   const accentColor = '#f59e0b'; // Laranja Neon
   const textColor = dark ? '#000000' : '#FFFFFF';
 
   return (
     <div className={`flex items-center space-x-2.5 ${className}`}>
-      <svg className="h-full aspect-square overflow-visible" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke={accentColor} strokeWidth="12" strokeLinecap="round">
-          {/* Engrenagem externa */}
-          <circle cx="100" cy="100" r="75" strokeWidth="16" strokeDasharray="30 20" />
-          <circle cx="100" cy="100" r="45" strokeWidth="8" />
-          {/* Barra de musculação central */}
-          <path d="M 50 100 L 150 100" stroke={accentColor} strokeWidth="16" />
-          <rect x="35" y="70" width="15" height="60" fill={accentColor} />
-          <rect x="150" y="70" width="15" height="60" fill={accentColor} />
-        </g>
-      </svg>
+      {storeData.logoUrl ? (
+        <img src={storeData.logoUrl} alt={storeData.name} className="h-8 w-auto object-contain bg-white/90 p-1 border border-orange-500/10" />
+      ) : (
+        <svg className="h-full aspect-square overflow-visible" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke={accentColor} strokeWidth="12" strokeLinecap="round">
+            <circle cx="100" cy="100" r="75" strokeWidth="16" strokeDasharray="30 20" />
+            <circle cx="100" cy="100" r="45" strokeWidth="8" />
+            <path d="M 50 100 L 150 100" stroke={accentColor} strokeWidth="16" />
+            <rect x="35" y="70" width="15" height="60" fill={accentColor} />
+            <rect x="150" y="70" width="15" height="60" fill={accentColor} />
+          </g>
+        </svg>
+      )}
       <div className="flex flex-col leading-[0.9] text-left font-display">
         <span className="text-xl font-extrabold tracking-tighter uppercase" style={{ color: textColor }}>ENGENHARIA</span>
         <span className="text-[14px] font-black tracking-[0.25em]" style={{ color: accentColor }}>DO CORPO</span>

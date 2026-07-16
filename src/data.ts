@@ -6,6 +6,7 @@ export const storeData: StoreData = {
   description: 'Treine na melhor academia de Lagoa Nova. Ampla área de musculação, salas de ginástica, spinning, professores qualificados e planos que cabem no seu bolso.',
   aboutText: 'A Engenharia do Corpo nasceu com o propósito de tornar a atividade física acessível a todos, sem abrir mão de um padrão premium de atendimento e infraestrutura. Nossa unidade em Lagoa Nova conta com equipamentos modernos de alta tecnologia, equipe técnica sempre disponível e uma grade completa de aulas coletivas para que você encontre a modalidade ideal para o seu estilo de vida.',
   aboutImage: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200',
+  logoUrl: 'https://engenhariadocorpofit.com.br/wp-content/uploads/2021/07/logo-engenharia-do-corpo.png',
   phone: '(84) 99900-1111',
   phoneFormatted: '84999001111',
   whatsappNumber: '5584999001111',
